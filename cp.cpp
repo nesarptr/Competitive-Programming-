@@ -97,6 +97,40 @@ int main() {
     int t;
     cin >> t;
     while (t--) {
+        int ct1 = 0;
+        int ct2 = 0;
+        string word;
+        cin >> word;
+        for (int i = 1; i < word.length(); i++) {
+            if (word[i] == word[i - 1]) {
+                if (word[i] == 'a') ct1++;
+                if (word[i] == 'b') ct2++;
+                i++;
+            }
+        }
+        if (ct1 < 2 && ct2 < 2) cout << "YES" << endl;
+        else cout << "NO" << endl;
+    }
+    return 0;
+}
+
+/*int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int x, y;
+        cin >> x >> y;
+        int z = y - x;
+        if (z > x && y % z != 0) cout << "YES" << endl;
+        else cout << "NO" << endl;
+    }
+    return 0;
+}
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
         int n, m;
         cin >> n >> m;
         vector<int> vec;
@@ -120,7 +154,7 @@ int main() {
     }
     return 0;
 }
-/*int main() {
+int main() {
     int t;
     cin >> t;
     for (int k = 0; k < t; k++) {
