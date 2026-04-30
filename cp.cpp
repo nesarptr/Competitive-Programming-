@@ -93,6 +93,58 @@ void solve() {
 #include <bits/stdc++.h>
 using namespace std;
 
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        long long n, ct = 0;
+        string s;
+        cin >> n >> s;
+        if (n % 2 == 1) {
+            cout << "NO" << endl;
+            continue;
+        }
+        for (char c: s) {
+            if (c == '(') ct++;
+            else ct--;
+        }
+        cout << (ct == 0 ? "YES" : "NO") << endl;
+    }
+    return 0;
+}
+/*int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int x, y;
+        cin >> x >> y;
+        if (x % 2 == 1 && y % 2 == 1) cout << "NO" << endl;
+        else cout << "YES" << endl;
+    }
+    return 0;
+}
+
+int main() {
+    int t;
+    cin >> t;
+    while (t--) {
+        int n;
+        cin >> n;
+        bool found = false;
+        for (int i = 0; i < n; i++) {
+            int a;
+            cin >> a;
+            if (a == 100) found = true;
+        }
+        cout << (found ? "YES" : "NO") << endl;
+    }
+    return 0;
+}
+
+
+
+
 int main() {
     int t;
     cin >> t;
@@ -114,7 +166,7 @@ int main() {
     return 0;
 }
 
-/*int main() {
+int main() {
     int t;
     cin >> t;
     while (t--) {
